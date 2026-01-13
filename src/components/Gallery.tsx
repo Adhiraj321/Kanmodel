@@ -5,13 +5,13 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 const images = [
-    "/gallery1.jpg",
-    "/gallery2.jpg",
-    "/gallery3.jpg",
-    "/gallery4.jpg",
-    "/gallery5.jpg",
     "/gallery6.jpg",
     "/gallery7.jpg",
+    "/gallery1.jpg",
+    "/gallery5.jpg",
+    "/gallery4.jpg",
+    "/gallery3.jpg",
+    "/gallery2.jpg",
 ];
 
 export function Gallery() {
@@ -27,17 +27,20 @@ export function Gallery() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="relative overflow-hidden group cursor-zoom-in break-inside-avoid"
+                        className="relative group cursor-zoom-in break-inside-avoid mb-8"
                         onClick={() => setSelectedImage(src)}
                         layoutId={`image-${src}`}
                     >
-                        <motion.img
-                            src={src}
-                            alt={`Portfolio image ${index + 1}`}
-                            className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
-                        />
-                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                            <span className="text-white font-serif italic text-xl">View</span>
+                        <div className="bg-white p-4 pb-12 shadow-md hover:shadow-2xl transition-all duration-500 rounded-sm rotate-0 group-hover:scale-[1.02] group-hover:-translate-y-2">
+                            <motion.img
+                                src={src}
+                                alt={`Portfolio image ${index + 1}`}
+                                className="w-full h-auto object-cover filter contrast-[1.05]"
+                            />
+                            {/* Polaroid Label area */}
+                            <div className="absolute bottom-4 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span className="font-handwriting text-foreground/60 text-sm">#{index + 1}</span>
+                            </div>
                         </div>
                     </motion.div>
                 ))}

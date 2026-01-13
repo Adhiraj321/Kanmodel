@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Playfair_Display } from "next/font/google";
+import { Geist, Playfair_Display, Quicksand, Caveat } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,10 +12,23 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Kanmodel",
   description: "A showcase of professional modeling work.",
 };
+
+import { FloatingElements } from "@/components/FloatingElements";
 
 export default function RootLayout({
   children,
@@ -25,8 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${playfair.variable} antialiased bg-background text-foreground`}
+        className={`${quicksand.variable} ${playfair.variable} ${caveat.variable} antialiased bg-background text-foreground`}
       >
+        <FloatingElements />
         {children}
       </body>
     </html>
