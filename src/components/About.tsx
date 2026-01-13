@@ -3,13 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-    { label: "Height", value: "5'11\"" },
-    { label: "Bust", value: "32\"" },
-    { label: "Waist", value: "24\"" },
-    { label: "Hips", value: "35\"" },
-    { label: "Shoes", value: "9 US" },
-    { label: "Hair", value: "Brown" },
-    { label: "Eyes", value: "Hazel" },
+    { label: "Height", value: "5'9\"" },
+    { label: "Shoes", value: "8 US" },
+    { label: "Hair", value: "Black" },
+    { label: "Eyes", value: "Brown" },
 ];
 
 export function About() {
@@ -24,10 +21,9 @@ export function About() {
                 >
                     <h2 className="text-4xl font-serif mb-8">About</h2>
                     <p className="text-muted-foreground leading-relaxed text-lg">
-                        Adhiraj is a professional fashion model based in New York City.
-                        With a unique look that blends classic elegance with modern edge,
-                        he has worked with top designers and photographers across the globe.
-                        Available for runway, editorial, and commercial bookings.
+                        A beginner here who's interested in exploring editorial and commercial work.
+
+                        I'm Comfortable in front of the camera and open to learning, with a natural, expressive presence. Looking to gain experience and gradually break into the modeling industry through test shoots and selective projects
                     </p>
                     <div className="mt-8 border-t border-muted pt-8">
                         <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">represented by</p>

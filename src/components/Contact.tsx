@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Instagram, Mail, Twitter } from "lucide-react";
+import { Instagram, Mail, Phone } from "lucide-react";
 
 export function Contact() {
     return (
@@ -19,7 +19,7 @@ export function Contact() {
                     </p>
 
                     <a
-                        href="mailto:contact@adhiraj.model"
+                        href="mailto:trikhakanishk@gmail.com"
                         className="inline-block border border-foreground px-8 py-4 text-sm uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors duration-300"
                     >
                         Contact Me
@@ -33,19 +33,20 @@ export function Contact() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="flex justify-center gap-8 pt-12 border-t border-muted/20"
                 >
-                    <a href="#" className="hover:opacity-70 transition-opacity">
+                    <a href="https://www.instagram.com/_bjkjff235__k" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                         <Instagram size={24} />
                     </a>
-                    <a href="#" className="hover:opacity-70 transition-opacity">
-                        <Twitter size={24} />
-                    </a>
-                    <a href="mailto:contact@adhiraj.model" className="hover:opacity-70 transition-opacity">
+
+                    <a href="mailto:trikhakanishk@gmail.com" className="hover:opacity-70 transition-opacity">
                         <Mail size={24} />
+                    </a>
+                    <a href="tel:8076132128" className="hover:opacity-70 transition-opacity">
+                        <Phone size={24} />
                     </a>
                 </motion.div>
 
                 <div className="text-xs text-muted-foreground mt-24">
-                    &copy; {new Date().getFullYear()} Adhiraj Portfolio. All rights reserved.
+                    &copy; {new Date().getFullYear()} Kanishk Portfolio. All rights reserved.
                 </div>
             </div>
         </section>
