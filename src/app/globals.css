@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  /* Pastel Cutesy Palette */
+  --background: #FFF5F7;
+  /* Very light pink background */
+  --foreground: #4A4A4A;
+  /* Soft dark gray text */
+  --card: #FFFFFF;
+  --card-foreground: #4A4A4A;
+  --popover: #FFFFFF;
+  --popover-foreground: #4A4A4A;
+  --primary: #FFB7B2;
+  /* Pastel Pink */
+  --primary-foreground: #FFFFFF;
+  --secondary: #E2C2FF;
+  /* Pastel Lavender */
+  --secondary-foreground: #4A4A4A;
+  --muted: #FFE4E6;
+  /* Light pink muted */
+  --muted-foreground: #888888;
+  --accent: #FFDAC1;
+  /* Peach */
+  --accent-foreground: #4A4A4A;
+  --destructive: #FF8989;
+  --destructive-foreground: #FFFFFF;
+  --border: #FCD5D9;
+  --input: #FCD5D9;
+  --ring: #FFB7B2;
+  --radius: 1.5rem;
+  /* Very rounded corners */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-xl: var(--radius);
+
+  --font-sans: var(--font-quicksand);
+  /* Switching for cuteness */
+  --font-serif: var(--font-playfair);
+  --font-handwriting: var(--font-caveat);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23FFB7B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>') 12 12, auto;
+  letter-spacing: 0.02em;
+  /* Slightly more airy */
+  line-height: 1.6;
+  /* More breathing room */
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  color: #5D4E4E;
+  /* Slightly warmer dark for headings */
+}
